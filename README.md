@@ -1,10 +1,10 @@
-# Alumni Engagement Portal
+# College Alumni Engagement Portal
 
-A web-based platform designed to connect **students, alumni, and administrators** through events, posts, communication, and user management.
+A web-based platform designed to connect **college students, alumni, and administrators** through events, posts, communication, and user management.
 
 ## 📌 Project Overview
 
-The Alumni Engagement Portal provides a centralized platform where students and alumni can interact, participate in events, share posts, and communicate with each other.
+The College Alumni Engagement Portal provides a centralized platform where students and alumni can interact, participate in events, share posts, and communicate with each other.
 
 Administrators can manage users, events, posts, and view system-related information through an admin dashboard.
 
