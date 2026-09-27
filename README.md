@@ -15,7 +15,7 @@ Administrators can manage users, events, posts, and view system-related informat
 * Admin dashboard
 * Manage students and alumni
 * View and manage users
-* Manage events
+* Create & Manage events
 * View event participants
 * Manage posts
 * View reports
