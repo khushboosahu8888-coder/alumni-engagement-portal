@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - College Alumni Engagement Portal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #ccfbf1 0%, #ffffff 50%, #e0f2f1 100%);
+            min-height: 100vh;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .hero-title h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: #ccfbf1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .mission-section {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 50px;
+            margin-bottom: 60px;
+        }
+
+        .mission-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .mission-header h2 {
+            font-size: 2.5rem;
+            color: #1e293b;
+            margin-bottom: 20px;
+        }
+
+        .mission-text {
+            font-size: 1.125rem;
+            color: #475569;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+
+
+        .section-title {
+            font-size: 2.5rem;
+            color: #1e293b;
+            text-align: center;
+            margin-bottom: 50px;
+            font-weight: bold;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            transform: translateY(-3px);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            color: #1e293b;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .feature-description {
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        .vision-section {
+            background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+            border-radius: 20px;
+            padding: 60px 40px;
+            color: white;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .vision-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+        }
+
+        .vision-text {
+            font-size: 1.125rem;
+            color: #ccfbf1;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            color: #1e293b;
+            margin-bottom: 15px;
+        }
+
+        .cta-text {
+            color: #64748b;
+            font-size: 1.125rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(13, 148, 136, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(13, 148, 136, 0.4);
+            background: linear-gradient(135deg, #0f766e 0%, #0d9488 100%);
+        }
+
+        .icon {
+            font-size: 1.5rem;
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+<!-- Back Button (Top Right) -->
+<a href="javascript:history.back()" 
+   style="position: fixed; top: 15px; right: 15px; 
+          background:black; color:#ffffff; 
+          padding:8px 16px; border-radius:6px; 
+          text-decoration:none; font-weight:600;
+          transition:0.2s;"
+   onmouseover="this.style.background='#333'; this.style.transform='scale(1.05)'"
+   onmouseout="this.style.background='black'; this.style.transform='scale(1)'">
+    ⬅ Back
+</a>
+
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <div class="hero-title">
+                <span class="icon">&#128101;</span>
+                <h1>About Us</h1>
+            </div>
+            <p class="hero-subtitle">
+                <Span style="color: black;"><B>'CONNECT'</B></Span> with fellow alumni through college events, <Span style="color: black;"><B>'SHARE'</B></Span> your experiences, jobs, news 
+                and <Span style="color: black;"><B>'GROW'</B></Span> together through meaningful conversations and opportunities.
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Mission Section -->
+        <div class="mission-section">
+            <div class="mission-header">
+                <div>
+                    <h2>&#127919; Our Mission</h2>
+                    <p class="mission-text">
+                        The <B>College Alumni Engagement Portal</B> is a modern, web-based platform created to strengthen the connection between 
+                        alumni, current students, and college administrators. Our goal is to build a unified digital community where past and present come together for learning, networking, and mentorship.
+                    </p>
+                    <p class="mission-text">
+                        Our mission is to foster guidance, collaboration, career growth, and continuous engagement through a secure and interactive platform.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+                <!-- Features Section -->
+        <h2 class="section-title">What We Offer</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">&#127760;</div>
+                <h3 class="feature-title">Connect & Network</h3>
+                <p class="feature-description">
+                    Build meaningful connections with fellow alumni across batches, departments, and industries.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🏆</div>
+                <h3 class="feature-title">Career Opportunities</h3>
+                <p class="feature-description">
+                    Access exclusive job postings and career resources shared by our alumni community.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📅</div>
+                <h3 class="feature-title">Event Registration and Management</h3>
+                <p class="feature-description">
+                    Admins can create & manage events and also see the registered participants, while users can view & register for upcoming programs, and stay updated on college activities.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📘</div>
+                <h3 class="feature-title">Centralized Profiles & Records</h3>
+                <p class="feature-description">
+                    Maintain verified and updated profiles for students and alumni, enabling easy searches based on batch, profession, or location.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔐</div>
+                <h3 class="feature-title">Secure Communication</h3>
+                <p class="feature-description">
+                    A safe, role-based login system with real-time messaging ensures smooth, private, and organized communication for all users.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">❤️</div>
+                <h3 class="feature-title">Give Back</h3>
+                <p class="feature-description">
+                    Support current students by offering mentorship, guidance, 
+                    and guest lectures—helping them grow academically and professionally.
+                </p>
+            </div>
+        </div>
+
+        <!-- Vision Section -->
+        <div class="vision-section">
+            <h2>Our Vision</h2>
+            <p class="vision-text">
+                We envision a thriving global community where every alumnus remains actively engaged with their alma mater, contributing to its growth while advancing their own personal and professional journeys. Together, we're building a legacy of excellence, innovation, and mutual support that transcends generations.
+            </p>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta-section">
+            <h2>Join Our Community Today</h2>
+            <p class="cta-text">
+                Whether you graduated last year or decades ago, there's a place for you in our alumni community. Reconnect, engage, and make a difference.
+            </p>
+            
+            <a href="index.php">
+    <button class="cta-button">Get Started</button>
+            </a>
+
+        </div>
+    </div>
+</body>
+</html>             
